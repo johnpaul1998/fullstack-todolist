@@ -14,30 +14,27 @@ export default function TodoHeader() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodo({
-      id: Math.floor(Math.random() * 100000),
-      text: input,
-    });
+    addTodo(input);
     setInput("");
   };
 
   return (
-    <form onSubmit={handleSubmit} className="new-task-form">
-      <div>
-        <input
-          id="new-task-input"
-          value={input}
-          ref={inputRef}
-          onChange={(e) => setInput(e.target.value)}
-          name="text"
-          className="todo-input"
-          style={{ width: "600px" }}
-          placeholder="What do you have planned?"
-        />
-        <button id="new-task-submit" onClick={handleSubmit}>
-          Add Todo
-        </button>
-      </div>
-    </form>
+      <form onSubmit={handleSubmit} className="new-task-form">
+        <div>
+          <input
+              id="new-task-input"
+              value={input}
+              ref={inputRef}
+              onChange={(e) => setInput(e.target.value)}
+              name="text"
+              className="todo-input"
+              style={{ width: "600px" }}
+              placeholder="What do you have planned?"
+          />
+          <button id="new-task-submit" onClick={handleSubmit}>
+            Add Todo
+          </button>
+        </div>
+      </form>
   );
 }
