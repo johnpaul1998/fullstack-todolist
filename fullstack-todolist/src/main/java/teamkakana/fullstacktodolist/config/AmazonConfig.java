@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class AmazonConfig {
     @Bean
     public AmazonS3 s3() {
-        AWSCredentials awsCredentials = new BasicAWSCredentials("AKIARNCTVXUGEL6YWU6V", "n3ZEPvNEVGDb5QAiDHIfK4VimlFbxCYfgAiwx4n3");
+//        AWSCredentials awsCredentials = new BasicAWSCredentials( "ACCESS_KEY has been remove");
 
         return AmazonS3ClientBuilder
                 .standard()
